@@ -26,8 +26,8 @@ interface BentoGridItemProps {
   img?: string;
   titleClassName?: string;
   techs?: string[];
+  stars?: number;
 }
-
 
 export const BentoGridItem: React.FC<BentoGridItemProps> = ({
   className,
@@ -39,6 +39,7 @@ export const BentoGridItem: React.FC<BentoGridItemProps> = ({
   img,
   titleClassName,
   techs = [],
+  stars,
 }) => (
   <div
     className={cn(
@@ -99,7 +100,17 @@ export const BentoGridItem: React.FC<BentoGridItemProps> = ({
           </div>
 
           <div className="space-y-6">
-            <p className="text-lg lg:text-3xl max-w-96 font-bold z-10">{title}</p>
+            <div className="flex items-center gap-3">
+              <p className="text-lg lg:text-3xl max-w-96 font-bold z-10">{title}</p>
+              {stars !== undefined && stars > 0 && (
+                <span className="flex items-center gap-1 text-yellow-400 text-sm">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  {stars}
+                </span>
+              )}
+            </div>
             <p className="font-extralight md:max-w-[80%] md:text-xs lg:text-base text-sm z-10 opacity-70">
               {description}
             </p>
