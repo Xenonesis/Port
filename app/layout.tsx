@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -42,9 +42,13 @@ export const metadata: Metadata = {
   ],
   generator: 'Next.js',
   referrer: 'origin',
-  themeColor: '#120012',
-  colorScheme: 'dark',
-  viewport: 'width=device-width, initial-scale=1',
   creator: 'Atzin Escandia',
   publisher: 'Atzin Escandia',
+};
+
+export const viewport: Viewport = {
+  themeColor: '#120012',
+  colorScheme: 'dark',
+  width: 'device-width',
+  initialScale: 1,
 };

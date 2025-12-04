@@ -180,12 +180,12 @@ export const socialMedia = [
 		link: "https://atzinescandia.dev/",
 	},
 	{
-		id: 3,
+		id: 4,
 		img: "assets/insta.svg",
 		link: "https://www.instagram.com/atzinescandia.dev/",
 	},
 	{
-		id: 3,
+		id: 5,
 		img: "assets/link.svg",
 		link: "https://github.com/atzin-escandia/devfolio",
 	},
