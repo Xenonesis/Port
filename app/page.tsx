@@ -4,6 +4,10 @@ import FloatingBar from "@/components/ui/FloatingBar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
+import Certifications from "@/components/Certifications";
+import Achievements from "@/components/Achievements";
+import Testimonials from "@/components/Testimonials";
+import Blog from "@/components/Blog";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -19,13 +23,16 @@ const Home = () => {
           <Hero />
           <About />
           <Projects />
+          <Certifications />
+          <Achievements />
+          <Testimonials />
+          <Blog />
           <Experience />
           <Contact />
         </div>
         <Footer />
       </div>
     </main>
-
   );
 };
 

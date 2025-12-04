@@ -1,6 +1,6 @@
 import React from "react";
 import { Sparkle } from "./ui/Sparkle";
-import { myTechStack, personalInfo } from "@/data";
+import { categorizedSkills, personalInfo } from "@/data";
 import Reveal from "./ui/Reveal";
 
 const About = () => (
@@ -28,17 +28,24 @@ const About = () => (
       >
         <p className="text-lg lg:text-3xl font-extrabold">
           <span className="bg-gradient-to-r from-purple to-red-700 bg-clip-text text-transparent">
-            My tech Stack!
+            My Tech Stack!
           </span>
         </p>
 
-        <div className="flex flex-wrap gap-3 py-4">
-          {myTechStack.map((skill) => (
-            <div
-              key={skill}
-              className="bg-white/10 text-white text-sm font-semibold px-4 py-2 rounded-full shadow-lg hover:bg-white/20 transition duration-200 ease-in-out"
-            >
-              {skill}
+        <div className="space-y-4 py-4">
+          {Object.entries(categorizedSkills).map(([category, skills]) => (
+            <div key={category}>
+              <p className="text-sm font-bold text-purple mb-2">{category}</p>
+              <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                  <div
+                    key={skill}
+                    className="bg-white/10 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-lg hover:bg-white/20 transition duration-200 ease-in-out"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
