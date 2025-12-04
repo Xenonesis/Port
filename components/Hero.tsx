@@ -17,7 +17,16 @@ const Hero = () => {
         />
         <Spotlight className="left-80 top-28 h-[100vh] w-[50vw]" fill="red" />
       </div>
-      <div className="text-center my-20 mx-auto max-w-[900px] justify-center flex flex-col ">
+      <div className="text-center my-20 mx-auto max-w-[900px] justify-center flex flex-col items-center">
+        <Reveal>
+          <div className="mb-8 flex justify-center">
+            <img
+              src="/1.png"
+              alt={personalInfo.name}
+              className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-purple shadow-lg shadow-purple/30"
+            />
+          </div>
+        </Reveal>
         <Reveal>
           <h1 className="text-center text-4xl md:text-6xl lg:text-8xl font-extrabold">
             Hey, I&apos;m {''}
