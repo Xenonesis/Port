@@ -1,6 +1,6 @@
 import React from "react";
 import { Sparkle } from "./ui/Sparkle";
-import { myTechStack } from "@/data";
+import { myTechStack, personalInfo } from "@/data";
 import Reveal from "./ui/Reveal";
 
 const About = () => (
@@ -18,17 +18,9 @@ const About = () => (
         duration={Math.floor(Math.random() * 10000) + 10000}
         className="flex-col text-left p-3 md:p-5 lg:p-10 gap-5 min-h-full"
       >
-        <p>
-          Hey! I&apos;m Atzin, web designer, developer, fitness lover (& accidental content creator)
-        </p>
-        <p>
-          My background in design and development gives me the tools to bring ideas to life, but my heart is in
-          connecting with people, I love sharing my journey and what I&apos;ve learned along the way.
-        </p>
-        <p>
-          Got something in mind or just want to chat? Whether it&apos;s a new project or a fitness tip, I&apos;d love to
-          connect, don&apos;t be shy!
-        </p>
+        {personalInfo.aboutBio.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
       </Sparkle>
 
       <div

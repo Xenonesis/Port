@@ -1,4 +1,5 @@
 import { Socials } from "./ui/Socials";
+import { personalInfo } from "@/data";
 
 const Footer = () => {
   return (
@@ -17,7 +18,7 @@ const Footer = () => {
             ✷ Link to the  <a
               className="text-purple font-extrabold hover:scale-105 inline-block transition-transform duration-200"
               target="_blank"
-              href="https://github.com/atzin-escandia/devfolio"
+              href={personalInfo.githubRepoLink}
             >
               github
             </a> repository ✷
@@ -28,9 +29,9 @@ const Footer = () => {
           Crafted with ❤ by  <a
             className="text-purple font-extrabold hover:scale-105 inline-block transition-transform duration-200"
             target="_blank"
-            href="https://atzinescandia.dev"
+            href={personalInfo.personalSiteLink}
           >
-            Atzin Escandia.
+            {personalInfo.name}
           </a>
         </p>
       </div>
