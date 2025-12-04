@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   description:
     'A customizable portfolio template for frontend developers, created by Atzin Escandia. Showcase your skills, projects, and experience with a clean and modern design.',
   icons: {
-    icon: './favicon.ico',
+    icon: '/logo.svg',
   },
   applicationName: 'Frontend Portfolio Template by Atzin Escandia',
   authors: [
